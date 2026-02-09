@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Owner Update - Sample</title>
+    <style>
+        @page {
+            margin: 0.5in;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+        }
+        
+        .header {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0 0 5px 0;
+            color: #667eea;
+            font-size: 28px;
+        }
+        
+        .header .tagline {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        .property-info {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .property-info div {
+            flex: 1;
+        }
+        
+        .property-info strong {
+            display: block;
+            color: #667eea;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+            padding-left: 12px;
+        }
+        
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .kpi-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .kpi-card .label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        
+        .kpi-card .value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .kpi-card .change {
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .change.positive {
+            color: #10b981;
+        }
+        
+        .change.negative {
+            color: #ef4444;
+        }
+        
+        .change.neutral {
+            color: #6b7280;
+        }
+        
+        .booking-list {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .booking-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .booking-item:last-child {
+            border-bottom: none;
+        }
+        
+        .booking-dates {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .booking-details {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .booking-amount {
+            font-weight: 600;
+            color: #667eea;
+            text-align: right;
+        }
+        
+        .insight-box {
+            background: #eff6ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+        
+        .insight-box h3 {
+            margin: 0 0 10px 0;
+            color: #667eea;
+            font-size: 16px;
+        }
+        
+        .insight-box ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .insight-box li {
+            margin-bottom: 8px;
+        }
+        
+        .maintenance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        .maintenance-table th {
+            background: #f8f9fa;
+            padding: 12px;
+            text-align: left;
+            font-size: 13px;
+            color: #666;
+            text-transform: uppercase;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .maintenance-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .status-completed {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .status-scheduled {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+        }
+        
+        .footer strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Weekly Owner Update</h1>
+        <p class="tagline">Your property performance at a glance</p>
+    </div>
+
+    <div class="property-info">
+        <div>
+            <strong>Property</strong>
+            <div>Beachfront Villa - 123 Ocean Drive</div>
+        </div>
+        <div>
+            <strong>Owner</strong>
+            <div>Sarah Thompson</div>
+        </div>
+        <div>
+            <strong>Week Ending</strong>
+            <div>February 9, 2026</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Performance Snapshot</h2>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="label">Occupancy Rate</div>
+                <div class="value">78%</div>
+                <div class="change positive">↑ 12% vs. last week</div>
+            </div>
+            <div class="kpi-card">
+                <div class="label">Revenue (MTD)</div>
+                <div class="value">$8,450</div>
+                <div class="change positive">↑ $1,200 vs. target</div>
+            </div>
+            <div class="kpi-card">
+                <div class="label">Avg. Nightly Rate</div>
+                <div class="value">$385</div>
+                <div class="change neutral">→ On target</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Recent & Upcoming Bookings</h2>
+        <div class="booking-list">
+            <div class="booking-item">
+                <div>
+                    <div class="booking-dates">Feb 12-16 (4 nights)</div>
+                    <div class="booking-details">Confirmed • 2 guests • Direct booking</div>
+                </div>
+                <div class="booking-amount">
+                    $1,540<br>
+                    <span style="font-size: 12px; color: #666;">Revenue</span>
+                </div>
+            </div>
+            <div class="booking-item">
+                <div>
+                    <div class="booking-dates">Feb 18-25 (7 nights)</div>
+                    <div class="booking-details">Confirmed • 4 guests • Airbnb</div>
+                </div>
+                <div class="booking-amount">
+                    $2,695<br>
+                    <span style="font-size: 12px; color: #666;">Revenue</span>
+                </div>
+            </div>
+            <div class="booking-item">
+                <div>
+                    <div class="booking-dates">Feb 27-Mar 6 (7 nights)</div>
+                    <div class="booking-details">Pending • 2 guests • VRBO</div>
+                </div>
+                <div class="booking-amount">
+                    $2,590<br>
+                    <span style="font-size: 12px; color: #666;">Est. Revenue</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>30-Day Booking Pace</h2>
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                <div>
+                    <strong style="color: #667eea;">18 nights booked</strong> out of 30 days
+                </div>
+                <div style="text-align: right;">
+                    <strong style="color: #10b981;">60% occupancy</strong>
+                </div>
+            </div>
+            <div style="background: #e5e7eb; height: 24px; border-radius: 12px; overflow: hidden;">
+                <div style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); height: 100%; width: 60%;"></div>
+            </div>
+            <div style="margin-top: 10px; font-size: 13px; color: #666;">
+                ⚡ Trending 8% above this time last month
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Maintenance & Operations</h2>
+        <table class="maintenance-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Item</th>
+                    <th>Cost</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Feb 5</td>
+                    <td>Pool cleaning & chemical balance</td>
+                    <td>$95</td>
+                    <td><span class="status-badge status-completed">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>Feb 7</td>
+                    <td>HVAC filter replacement</td>
+                    <td>$85</td>
+                    <td><span class="status-badge status-completed">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>Feb 14</td>
+                    <td>Deep cleaning (turnover)</td>
+                    <td>$180</td>
+                    <td><span class="status-badge status-scheduled">Scheduled</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="margin-top: 15px; padding: 12px; background: #f8f9fa; border-radius: 6px; font-size: 14px;">
+            <strong>Total maintenance this week:</strong> $180 • <span style="color: #10b981;">Under budget</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>What Changed This Week</h2>
+        <div class="insight-box">
+            <h3>📈 Key Updates</h3>
+            <ul>
+                <li><strong>New booking:</strong> 7-night stay in late February locked in via Airbnb at $385/night (above our $360 target rate)</li>
+                <li><strong>Pricing adjustment:</strong> Increased weekend rates for March by 12% based on local event demand</li>
+                <li><strong>Guest review:</strong> Received 5-star review mentioning the new outdoor furniture</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Looking Ahead (Next 30 Days)</h2>
+        <div class="insight-box">
+            <h3>🎯 Opportunities & Risks</h3>
+            <ul>
+                <li><strong>Opportunity:</strong> Spring break window (Mar 15-22) is still 60% open. We've increased rates and promoted across all channels.</li>
+                <li><strong>Action taken:</strong> Launched targeted ads for families seeking beachfront properties.</li>
+                <li><strong>Maintenance note:</strong> Annual AC servicing scheduled for Feb 28 during gap between bookings ($250 budgeted).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>Questions?</strong> Reply to this email or call us at (555) 123-4567</p>
+        <p style="margin-top: 10px;">Powered by <strong>OwnerPulse</strong> • Property managed by <strong>Coastal Stays Management</strong></p>
+    </div>
+</body>
+</html>
