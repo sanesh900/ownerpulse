@@ -99,8 +99,18 @@ export default function Home() {
 
       {/* FORM / CTA SECTION */}
       <section id="form">
-        <h2>Get Early Access</h2>
-        <p>Download the sample update and join our pilot group.</p>
+        <h2>Get the Sample Owner Update</h2>
+        <p>Enter your details to download the sample + join the pilot waitlist.</p>
+        
+        <p style={{ 
+          fontSize: '0.95rem', 
+          color: '#666', 
+          fontStyle: 'italic', 
+          marginBottom: '1.5rem',
+          paddingTop: '0.5rem'
+        }}>
+          This is for STR property managers (not individual hosts).
+        </p>
         
         <form action={FORM_ACTION_URL} method="POST">
           <div className="form-group">
