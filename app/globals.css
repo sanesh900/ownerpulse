@@ -263,4 +263,9 @@ strong {
   .btn {
     width: 100%;
   }
+  
+  /* Make comparison columns stack on mobile */
+  section > div[style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
 }
