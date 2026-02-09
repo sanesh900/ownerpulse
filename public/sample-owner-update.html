@@ -124,6 +124,7 @@
         .booking-item {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding: 12px 0;
             border-bottom: 1px solid #e5e7eb;
         }
@@ -133,19 +134,41 @@
         }
         
         .booking-dates {
-            font-weight: 600;
+            font-weight: 700;
             color: #333;
+            font-size: 15px;
         }
         
         .booking-details {
             color: #666;
-            font-size: 14px;
+            font-size: 13px;
+            margin-top: 2px;
         }
         
         .booking-amount {
             font-weight: 600;
             color: #667eea;
             text-align: right;
+            font-size: 18px;
+        }
+        
+        .booking-status {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        
+        .booking-status.booked {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .booking-status.pending {
+            background: #fef3c7;
+            color: #92400e;
         }
         
         .insight-box {
@@ -157,18 +180,32 @@
         }
         
         .insight-box h3 {
-            margin: 0 0 10px 0;
+            margin: 0 0 15px 0;
             color: #667eea;
             font-size: 16px;
         }
         
         .insight-box ul {
-            margin: 10px 0;
-            padding-left: 20px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
         
         .insight-box li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.5;
+        }
+        
+        .insight-box li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .insight-icon {
+            position: absolute;
+            left: 0;
+            font-size: 18px;
         }
         
         .maintenance-table {
@@ -226,8 +263,19 @@
 </head>
 <body>
     <div class="header">
-        <h1>Weekly Owner Update</h1>
-        <p class="tagline">Your property performance at a glance</p>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div>
+                <h1>Weekly Owner Update</h1>
+                <p class="tagline">Your property performance at a glance</p>
+            </div>
+            <div style="text-align: right; color: #667eea; font-size: 13px; font-weight: 600;">
+                OwnerPulse Weekly Report<br>
+                <span style="font-size: 11px; color: #999;">(Pilot)</span>
+            </div>
+        </div>
+        <p style="margin: 15px 0 0 0; font-size: 14px; color: #666; font-style: italic;">
+            This weekly update was generated automatically from your booking and operations data.
+        </p>
     </div>
 
     <div class="property-info">
@@ -271,33 +319,30 @@
         <div class="booking-list">
             <div class="booking-item">
                 <div>
-                    <div class="booking-dates">Feb 12-16 (4 nights)</div>
-                    <div class="booking-details">Confirmed • 2 guests • Direct booking</div>
+                    <div class="booking-dates">Feb 12-16 <span style="font-weight: 400; color: #666;">(4 nights)</span></div>
+                    <div class="booking-details">
+                        <span class="booking-status booked">Booked</span> • 2 guests • Direct booking
+                    </div>
                 </div>
-                <div class="booking-amount">
-                    $1,540<br>
-                    <span style="font-size: 12px; color: #666;">Revenue</span>
-                </div>
+                <div class="booking-amount">$1,540</div>
             </div>
             <div class="booking-item">
                 <div>
-                    <div class="booking-dates">Feb 18-25 (7 nights)</div>
-                    <div class="booking-details">Confirmed • 4 guests • Airbnb</div>
+                    <div class="booking-dates">Feb 18-25 <span style="font-weight: 400; color: #666;">(7 nights)</span></div>
+                    <div class="booking-details">
+                        <span class="booking-status booked">Booked</span> • 4 guests • Airbnb
+                    </div>
                 </div>
-                <div class="booking-amount">
-                    $2,695<br>
-                    <span style="font-size: 12px; color: #666;">Revenue</span>
-                </div>
+                <div class="booking-amount">$2,695</div>
             </div>
             <div class="booking-item">
                 <div>
-                    <div class="booking-dates">Feb 27-Mar 6 (7 nights)</div>
-                    <div class="booking-details">Pending • 2 guests • VRBO</div>
+                    <div class="booking-dates">Feb 27-Mar 6 <span style="font-weight: 400; color: #666;">(7 nights)</span></div>
+                    <div class="booking-details">
+                        <span class="booking-status pending">Pending</span> • 2 guests • VRBO
+                    </div>
                 </div>
-                <div class="booking-amount">
-                    $2,590<br>
-                    <span style="font-size: 12px; color: #666;">Est. Revenue</span>
-                </div>
+                <div class="booking-amount">$2,590</div>
             </div>
         </div>
     </div>
@@ -362,11 +407,20 @@
     <div class="section">
         <h2>What Changed This Week</h2>
         <div class="insight-box">
-            <h3>📈 Key Updates</h3>
+            <h3>Key Updates</h3>
             <ul>
-                <li><strong>New booking:</strong> 7-night stay in late February locked in via Airbnb at $385/night (above our $360 target rate)</li>
-                <li><strong>Pricing adjustment:</strong> Increased weekend rates for March by 12% based on local event demand</li>
-                <li><strong>Guest review:</strong> Received 5-star review mentioning the new outdoor furniture</li>
+                <li>
+                    <span class="insight-icon">🟢</span>
+                    <strong>New booking:</strong> 7-night stay in late February via Airbnb at $385/night (above $360 target)
+                </li>
+                <li>
+                    <span class="insight-icon">📈</span>
+                    <strong>Pricing change:</strong> Weekend March rates increased 12% for local events
+                </li>
+                <li>
+                    <span class="insight-icon">⭐</span>
+                    <strong>Guest review:</strong> 5-star rating mentioning new outdoor furniture
+                </li>
             </ul>
         </div>
     </div>
@@ -376,9 +430,22 @@
         <div class="insight-box">
             <h3>🎯 Opportunities & Risks</h3>
             <ul>
-                <li><strong>Opportunity:</strong> Spring break window (Mar 15-22) is still 60% open. We've increased rates and promoted across all channels.</li>
-                <li><strong>Action taken:</strong> Launched targeted ads for families seeking beachfront properties.</li>
-                <li><strong>Maintenance note:</strong> Annual AC servicing scheduled for Feb 28 during gap between bookings ($250 budgeted).</li>
+                <li>
+                    <span class="insight-icon">🎯</span>
+                    <strong>Opportunity:</strong> Spring break window (Mar 15-22) is still 60% open. We've increased rates and promoted across all channels.
+                </li>
+                <li>
+                    <span class="insight-icon">⚡</span>
+                    <strong>Action taken:</strong> Launched targeted ads for families seeking beachfront properties.
+                </li>
+                <li>
+                    <span class="insight-icon">🔧</span>
+                    <strong>Maintenance note:</strong> Annual AC servicing scheduled for Feb 28 during gap between bookings ($250 budgeted).
+                </li>
+                <li>
+                    <span class="insight-icon">💡</span>
+                    <strong>Strategy:</strong> Maintain premium pricing for weekends; soften midweek rates to close remaining gaps.
+                </li>
             </ul>
         </div>
     </div>
