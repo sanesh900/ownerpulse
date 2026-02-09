@@ -19,7 +19,7 @@ export default function Home() {
         <p>Bookings, revenue pacing, maintenance, and forward outlook — sent automatically to owners.</p>
         
         <div className="cta-buttons">
-          <a href="#form" className="btn btn-primary">Get Sample Owner Update</a>
+          <a href="/Weekly Owner Update - Sample2.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Get Sample Owner Update</a>
           <a href="#form" className="btn btn-secondary">Join Pilot Program</a>
         </div>
         
@@ -65,8 +65,35 @@ export default function Home() {
       <section>
         <h2>What Owners Receive Each Week</h2>
         <p>This is an example of the automated update your owners would get.</p>
-        <div className="preview-box">
-          Preview goes here — fake PDF screenshot added later.
+        <div style={{ marginTop: '1.5rem' }}>
+          <a href="/Weekly Owner Update - Sample2.pdf" target="_blank" rel="noopener noreferrer" 
+             style={{ display: 'block', textDecoration: 'none' }}>
+            <img 
+              src="/Screenshot 2026-02-10 at 00.53.23.png" 
+              alt="Sample owner update preview" 
+              style={{ 
+                maxWidth: '100%', 
+                border: '2px solid #ddd',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                transition: 'transform 0.2s, box-shadow 0.2s'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.1)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            />
+          </a>
+          <p style={{ marginTop: '1rem', textAlign: 'center' }}>
+            <a href="/Weekly Owner Update - Sample2.pdf" target="_blank" rel="noopener noreferrer"
+               style={{ color: '#667eea', fontWeight: 600, fontSize: '1.1rem', textDecoration: 'none' }}>
+              Click to view full sample PDF →
+            </a>
+          </p>
         </div>
       </section>
 
