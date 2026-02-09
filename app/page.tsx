@@ -1,16 +1,12 @@
 /**
  * OwnerPulse Landing Page
  * 
- * FORMSPREE SETUP:
- * 1. Sign up at https://formspree.io/
- * 2. Create a new form and get your unique endpoint URL
- * 3. Replace FORM_ACTION_URL below with your Formspree URL
- * 
- * Example: const FORM_ACTION_URL = "https://formspree.io/f/YOUR_FORM_ID";
+ * FORMSPREE SETUP: ✅ COMPLETE
+ * Form endpoint: https://formspree.io/f/xzdazoek
+ * Form submissions will be sent to your Formspree account.
  */
 
-// ⚠️ PASTE YOUR FORMSPREE URL HERE:
-const FORM_ACTION_URL = "https://formspree.io/f/YOUR_FORM_ID";
+const FORM_ACTION_URL = "https://formspree.io/f/xzdazoek";
 
 export default function Home() {
   return (
