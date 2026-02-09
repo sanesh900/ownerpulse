@@ -4,8 +4,8 @@ export default function Thanks() {
   return (
     <div className="container">
       <div className="thanks-container">
-        <h1>You're in.</h1>
-        <p>Thanks — we'll email the sample owner update shortly.</p>
+        <h1>You&apos;re in.</h1>
+        <p>Thanks — we&apos;ll email the sample owner update shortly.</p>
         <p className="secondary-text">
           If you want to move faster, reply with: PMS used + units managed + how you report to owners today.
         </p>

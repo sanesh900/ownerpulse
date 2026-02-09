@@ -32,12 +32,12 @@ export default function Home() {
       <section>
         <h2>Owner Reporting Still Eats Too Much Time</h2>
         <ul>
-          <li>write long "explainer" emails to owners</li>
+          <li>write long &ldquo;explainer&rdquo; emails to owners</li>
           <li>export spreadsheets every month</li>
-          <li>answer "why did revenue drop?" calls</li>
+          <li>answer &ldquo;why did revenue drop?&rdquo; calls</li>
           <li>manually explain maintenance charges</li>
           <li>screenshot calendars and bookings</li>
-          <li>worry owners don't understand what's happening</li>
+          <li>worry owners don&apos;t understand what&apos;s happening</li>
         </ul>
         <p><strong>Your PMS tracks the numbers. Owners still want clarity.</strong></p>
       </section>
@@ -46,15 +46,15 @@ export default function Home() {
       <section>
         <h2>A Communication Layer on Top of Hostaway</h2>
         <p>
-          We're building a lightweight add-on that turns your Hostaway data into clear, 
+          We&apos;re building a lightweight add-on that turns your Hostaway data into clear, 
           weekly owner-friendly updates.
         </p>
         <ul>
           <li>KPI snapshots and trends</li>
           <li>Booking pace for the next 30 days</li>
           <li>Revenue to date</li>
-          <li>Maintenance & operations summary</li>
-          <li>"What changed this week" narrative</li>
+          <li>Maintenance &amp; operations summary</li>
+          <li>&ldquo;What changed this week&rdquo; narrative</li>
           <li>Upcoming risks and opportunities</li>
           <li>Fully white-labelled reports</li>
         </ul>
@@ -72,7 +72,7 @@ export default function Home() {
 
       {/* WHO IT'S FOR SECTION */}
       <section>
-        <h2>Who It's For</h2>
+        <h2>Who It&apos;s For</h2>
         <ul>
           <li>Professional STR managers</li>
           <li>20–200+ units under management</li>
@@ -85,7 +85,7 @@ export default function Home() {
 
       {/* WHY SECTION */}
       <section>
-        <h2>Why We're Building This</h2>
+        <h2>Why We&apos;re Building This</h2>
         <p>
           Most STR software focuses on bookings, payouts, accounting, and channel management.
         </p>
