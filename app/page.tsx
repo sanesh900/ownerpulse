@@ -275,19 +275,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHO IT'S FOR SECTION */}
-      <section>
-        <h2>Who It&apos;s For</h2>
-        <ul>
-          <li>Professional STR managers</li>
-          <li>20–200+ units under management</li>
-          <li>Multiple property owners</li>
-          <li>Using Hostaway</li>
-          <li>Spending hours each month on owner communication</li>
-          <li>Wanting to look polished and proactive</li>
-        </ul>
-      </section>
-
       {/* WHY SECTION */}
       <section>
         <h2>Why We&apos;re Building This</h2>
