@@ -398,7 +398,7 @@ export default function Home() {
           </div>
 
           {/* Hidden field for Formspree redirect */}
-          <input type="hidden" name="_next" value="/thanks" />
+          <input type="hidden" name="_next" value="https://ownerpulse.vercel.app/thanks" />
           
           <button type="submit" className="btn-submit">
             Get Sample & Join Pilot Waitlist
