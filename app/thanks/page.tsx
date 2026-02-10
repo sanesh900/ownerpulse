@@ -7,8 +7,8 @@ export default function Thanks() {
   // Track conversion when page loads
   useEffect(() => {
     // Google Ads conversion tracking
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'conversion', {
         'send_to': 'AW-17944653028/CONVERSION_LABEL', // Replace CONVERSION_LABEL with your actual label from Google Ads
       });
     }
