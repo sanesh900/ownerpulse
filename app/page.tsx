@@ -301,7 +301,7 @@ export default function Home() {
           <div>
             <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🔒</div>
             <p style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Secure & Private</p>
-            <p style={{ fontSize: '0.9rem', color: '#666', margin: 0 }}>Your data never leaves Hostaway</p>
+            <p style={{ fontSize: '0.9rem', color: '#666', margin: 0 }}>Secure read-only access to your Hostaway data</p>
           </div>
           <div>
             <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🎨</div>
@@ -420,7 +420,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer>
-        © 2026 OwnerPulse (working name) · 
+        © 2026 OwnerPulse · 
         <a href="#privacy">Privacy</a> · 
         <a href="#contact">Contact</a>
       </footer>
