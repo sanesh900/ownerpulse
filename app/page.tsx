@@ -20,7 +20,7 @@ export default function Home() {
           Stop writing weekly owner emails, spreadsheets, and explanations — send clear performance summaries automatically.
         </p>
         <p style={{ opacity: 0.95, marginBottom: '2rem' }}>
-          Bookings, revenue pacing, maintenance, and forward outlook — sent automatically to owners.
+          Not just numbers — every update explains what changed and what we&apos;re doing next.
         </p>
         
         <div className="cta-buttons">
