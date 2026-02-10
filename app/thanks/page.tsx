@@ -1,6 +1,18 @@
+'use client';
+
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Thanks() {
+  // Track conversion when page loads
+  useEffect(() => {
+    // Google Ads conversion tracking
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-17944653028/CONVERSION_LABEL', // Replace CONVERSION_LABEL with your actual label from Google Ads
+      });
+    }
+  }, []);
   return (
     <div className="container">
       <div className="thanks-container">
