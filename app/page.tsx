@@ -16,15 +16,21 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="hero">
         <h1>Automated Weekly Owner Updates for Hostaway Property Managers</h1>
-        <p>Bookings, revenue pacing, maintenance, and forward outlook — sent automatically to owners.</p>
+        <p style={{ fontSize: '1.4rem', fontWeight: 600, marginBottom: '1rem', color: 'white' }}>
+          Stop writing weekly owner emails, spreadsheets, and explanations — send clear performance summaries automatically.
+        </p>
+        <p style={{ opacity: 0.95, marginBottom: '2rem' }}>
+          Bookings, revenue pacing, maintenance, and forward outlook — sent automatically to owners.
+        </p>
         
         <div className="cta-buttons">
-          <a href="/Weekly Owner Update - Sample2.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Get Sample Owner Update</a>
-          <a href="#form" className="btn btn-secondary">Join Pilot Program</a>
+          <a href="/Weekly Owner Update - Sample2.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '1.2rem 2.5rem' }}>
+            Get the Sample Owner Update
+          </a>
         </div>
         
         <div className="small-text">
-          Built for professional short-term rental managers.
+          Designed for teams using Hostaway who want to save hours per week on owner communication.
         </div>
       </section>
 
@@ -82,7 +88,10 @@ export default function Home() {
 
       {/* COMPARISON SECTION */}
       <section>
-        <h2>Standard PMS vs. PMS + OwnerPulse</h2>
+        <h2>Hostaway Tracks the Data. You Do the Manual Work.</h2>
+        <p style={{ fontSize: '1.15rem', color: '#555', marginBottom: '2rem', textAlign: 'center' }}>
+          Imagine saving <strong>5-10 hours per owner per month</strong> on reporting.
+        </p>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginTop: '2rem' }}>
           <div style={{ background: '#fef2f2', padding: '1.5rem', borderRadius: '8px', border: '2px solid #fecaca' }}>
             <h3 style={{ color: '#dc2626', marginBottom: '1rem' }}>What You Do Today</h3>
@@ -93,7 +102,7 @@ export default function Home() {
               </li>
               <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
                 <span style={{ color: '#dc2626', marginRight: '0.5rem', fontSize: '1.2rem' }}>❌</span>
-                <span>Copy/paste data into emails</span>
+                <span>Write the same explanation emails</span>
               </li>
               <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
                 <span style={{ color: '#dc2626', marginRight: '0.5rem', fontSize: '1.2rem' }}>❌</span>
@@ -105,7 +114,7 @@ export default function Home() {
               </li>
               <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
                 <span style={{ color: '#dc2626', marginRight: '0.5rem', fontSize: '1.2rem' }}>❌</span>
-                <span>3-5 hours/month per owner</span>
+                <span><strong>3-5 hours per owner per month</strong></span>
               </li>
             </ul>
           </div>
@@ -114,7 +123,7 @@ export default function Home() {
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
                 <span style={{ color: '#16a34a', marginRight: '0.5rem', fontSize: '1.2rem' }}>✅</span>
-                <span>Automatic weekly updates sent</span>
+                <span>Weekly summaries emailed to owners</span>
               </li>
               <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
                 <span style={{ color: '#16a34a', marginRight: '0.5rem', fontSize: '1.2rem' }}>✅</span>
@@ -122,15 +131,15 @@ export default function Home() {
               </li>
               <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
                 <span style={{ color: '#16a34a', marginRight: '0.5rem', fontSize: '1.2rem' }}>✅</span>
-                <span>Owners get proactive insights</span>
+                <span>Metrics + narrative, no typing</span>
               </li>
               <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
                 <span style={{ color: '#16a34a', marginRight: '0.5rem', fontSize: '1.2rem' }}>✅</span>
-                <span>You look like a pro operation</span>
+                <span>Proactive communication = happy owners</span>
               </li>
               <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
                 <span style={{ color: '#16a34a', marginRight: '0.5rem', fontSize: '1.2rem' }}>✅</span>
-                <span><strong>90% time saved</strong></span>
+                <span><strong>Cut owner emails by 60%+</strong></span>
               </li>
             </ul>
           </div>
@@ -144,7 +153,7 @@ export default function Home() {
           textAlign: 'center'
         }}>
           <p style={{ fontSize: '1.2rem', fontWeight: 600, margin: 0, color: 'white' }}>
-            Stop being the middleman. Let your PMS data do the talking.
+            This tool does what you&apos;re already paying or spending hours to do manually.
           </p>
         </div>
       </section>
@@ -193,37 +202,37 @@ export default function Home() {
         </p>
       </section>
 
-      {/* PORTFOLIO DASHBOARD SECTION - NEW! */}
+      {/* PORTFOLIO SUMMARY SECTION */}
       <section style={{ background: 'linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%)', border: '2px solid #667eea' }}>
-        <h2>Portfolio Dashboard for Multi-Property Owners</h2>
+        <h2>Portfolio Summary for Multi-Property Owners</h2>
         <p style={{ fontSize: '1.15rem', color: '#555' }}>
-          Owners with multiple properties don&apos;t want 3 separate PDFs. They want one view of their entire portfolio.
+          Owners with multiple properties don&apos;t want 3 separate emails. They get one weekly summary of their entire portfolio, then can drill into any property.
         </p>
         <div style={{ marginTop: '2rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
           <div>
-            <h3 style={{ fontSize: '1.2rem', color: '#667eea', marginBottom: '1rem' }}>Portfolio Summary</h3>
+            <h3 style={{ fontSize: '1.2rem', color: '#667eea', marginBottom: '1rem' }}>Portfolio Overview</h3>
             <ul style={{ fontSize: '1rem' }}>
               <li>Combined revenue across all properties</li>
               <li>Average occupancy rate</li>
-              <li>Best & worst performing properties</li>
-              <li>Total maintenance costs this month</li>
+              <li>Best & worst performing this week</li>
+              <li>Total maintenance costs</li>
               <li>Upcoming opportunities across portfolio</li>
             </ul>
           </div>
           <div>
-            <h3 style={{ fontSize: '1.2rem', color: '#667eea', marginBottom: '1rem' }}>Individual Breakdowns</h3>
+            <h3 style={{ fontSize: '1.2rem', color: '#667eea', marginBottom: '1rem' }}>Property Details</h3>
             <ul style={{ fontSize: '1rem' }}>
-              <li>Click any property for detailed view</li>
-              <li>Same weekly update format</li>
-              <li>Property-specific insights</li>
-              <li>Compare property performance</li>
-              <li>Spot trends across portfolio</li>
+              <li>Drill into any property for full breakdown</li>
+              <li>Same weekly update format per property</li>
+              <li>Property-specific insights & actions</li>
+              <li>Compare property performance trends</li>
+              <li>All in one email, organized clearly</li>
             </ul>
           </div>
         </div>
         <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'white', borderRadius: '8px', border: '2px solid #667eea' }}>
           <p style={{ fontSize: '1.1rem', fontWeight: 600, color: '#667eea', margin: 0, textAlign: 'center' }}>
-            One glance. Full portfolio clarity. Then drill down as needed.
+            One weekly email. Full portfolio clarity. No manual compilation.
           </p>
         </div>
       </section>
@@ -231,7 +240,9 @@ export default function Home() {
       {/* PREVIEW SECTION */}
       <section>
         <h2>What Owners Receive Each Week</h2>
-        <p>This is an example of the automated update your owners would get.</p>
+        <p style={{ fontSize: '1.15rem', color: '#555' }}>
+          See exactly what your owners could receive every week — metrics + narrative, ready without typing an email.
+        </p>
         <div style={{ marginTop: '1.5rem' }}>
           <a href="/Weekly Owner Update - Sample2.pdf" target="_blank" rel="noopener noreferrer" 
              style={{ display: 'block', textDecoration: 'none' }}>
@@ -403,9 +414,21 @@ export default function Home() {
           <input type="hidden" name="_next" value="/thanks" />
           
           <button type="submit" className="btn-submit">
-            Request Sample & Pilot Access
+            Get Sample & Join Pilot Waitlist
           </button>
         </form>
+        
+        <div style={{ 
+          marginTop: '2rem', 
+          padding: '1.25rem', 
+          background: '#f0f4ff', 
+          borderRadius: '8px',
+          borderLeft: '4px solid #667eea',
+          fontSize: '0.95rem',
+          color: '#666'
+        }}>
+          <strong style={{ color: '#667eea' }}>This isn&apos;t another spreadsheet.</strong> This is a weekly summary designed for owners — not accountants. Clear, automated, and sent on your schedule.
+        </div>
       </section>
 
       {/* FOOTER */}
