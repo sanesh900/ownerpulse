@@ -421,9 +421,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer>
         <p style={{ marginBottom: '0.5rem' }}>
-          © 2026 OwnerPulse · 
-          <a href="#privacy">Privacy</a> · 
-          <a href="#contact">Contact</a>
+          © 2026 OwnerPulse
         </p>
         <p style={{ fontSize: '0.85rem', color: '#999', margin: 0 }}>
           This site is not affiliated with or endorsed by Hostaway.
