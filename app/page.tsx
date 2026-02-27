@@ -1,47 +1,65 @@
 'use client';
 
-/**
- * OwnerPulse Landing Page
- * 
- * FORMSPREE SETUP: ✅ COMPLETE
- * Form endpoint: https://formspree.io/f/xzdazoek
- * Form submissions will be sent to your Formspree account.
- */
-
-const FORM_ACTION_URL = "https://formspree.io/f/xzdazoek";
+import SiteFooter from "./components/SiteFooter";
+import { SITE_CONFIG } from "./site-config";
 
 export default function Home() {
   return (
     <div className="container">
       {/* HERO SECTION */}
       <section className="hero">
-        <h1>Automated Weekly Owner Updates for Hostaway Property Managers</h1>
-        <p style={{ fontSize: '1.4rem', fontWeight: 600, marginBottom: '1rem', color: 'white' }}>
-          Stop writing weekly owner emails, spreadsheets, and explanations — send clear performance summaries automatically.
+        <h1>Automated Weekly Owner Updates for Short-Term Rental Managers</h1>
+        <p style={{ fontSize: '1.1rem', fontWeight: 500, marginBottom: '0.5rem', color: 'white', opacity: 0.9 }}>
+          Works best with Hostaway today — more PMS support coming.
         </p>
-        <p style={{ opacity: 0.95, marginBottom: '2rem' }}>
+        <p style={{ opacity: 0.9, marginBottom: '2rem', fontSize: '1.15rem' }}>
+          Stop writing weekly owner emails, spreadsheets, and explanations — send clear
+          performance summaries automatically.
+        </p>
+        <p style={{ opacity: 0.85, marginBottom: '2rem', fontSize: '1.05rem' }}>
           Not just numbers — every update explains what changed and what we&apos;re doing next.
         </p>
-        
+
         <div className="cta-buttons">
-          <a href="/Weekly Owner Update - Sample2.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '1.2rem 2.5rem' }}>
-            Get the Sample Owner Update
+          <a
+            href={SITE_CONFIG.samplePdfUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+            style={{ fontSize: '1.2rem', padding: '1.2rem 2.5rem' }}
+          >
+            Download Sample Weekly Owner Update (PDF)
           </a>
         </div>
-        
+
+        <div className="small-text" style={{ marginTop: '0.75rem' }}>
+          Sample document only. No login required.
+        </div>
         <div className="small-text">
-          Designed for teams using Hostaway who want to save hours per week on owner communication.
+          Designed for teams who want to save hours per week on owner communication.
         </div>
       </section>
 
-      {/* PROBLEM SECTION - REFRAMED */}
+      {/* INDEPENDENCE DISCLAIMER */}
+      <div style={{
+        textAlign: 'center',
+        fontSize: '0.85rem',
+        color: '#888',
+        marginBottom: '1rem',
+        marginTop: '-2rem',
+        padding: '0 1rem',
+      }}>
+        OwnerPulse is an independent tool and is not affiliated with or endorsed by Hostaway or any other PMS provider.
+      </div>
+
+      {/* PROBLEM SECTION */}
       <section>
         <h2>You Built a Great Business. Now You&apos;re Drowning in Owner Emails.</h2>
         <p style={{ fontSize: '1.15rem', color: '#555', marginBottom: '1.5rem' }}>
           Every week, the same exhausting cycle:
         </p>
         <ul>
-          <li>Export last week&apos;s bookings from Hostaway</li>
+          <li>Export last week&apos;s bookings from your PMS</li>
           <li>Copy numbers into a spreadsheet</li>
           <li>Write the same update emails to each owner</li>
           <li>Field anxious calls: &ldquo;Why did revenue drop?&rdquo;</li>
@@ -60,26 +78,18 @@ export default function Home() {
       <section style={{ background: '#f0f4ff', border: '2px solid #667eea', borderRadius: '12px' }}>
         <h2 style={{ color: '#667eea' }}>Does This Sound Like You?</h2>
         <div style={{ display: 'grid', gap: '1rem' }}>
-          <label style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', cursor: 'pointer', padding: '0.5rem' }}>
-            <input type="checkbox" style={{ marginTop: '0.25rem', width: 'auto' }} disabled />
-            <span>You manage 20+ properties across multiple owners</span>
-          </label>
-          <label style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', cursor: 'pointer', padding: '0.5rem' }}>
-            <input type="checkbox" style={{ marginTop: '0.25rem', width: 'auto' }} disabled />
-            <span>Owners constantly ask for updates: &ldquo;How&apos;s my property doing?&rdquo;</span>
-          </label>
-          <label style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', cursor: 'pointer', padding: '0.5rem' }}>
-            <input type="checkbox" style={{ marginTop: '0.25rem', width: 'auto' }} disabled />
-            <span>You spend 3-5 hours per month per owner on reporting</span>
-          </label>
-          <label style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', cursor: 'pointer', padding: '0.5rem' }}>
-            <input type="checkbox" style={{ marginTop: '0.25rem', width: 'auto' }} disabled />
-            <span>You wish Hostaway just... talked to owners directly</span>
-          </label>
-          <label style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', cursor: 'pointer', padding: '0.5rem' }}>
-            <input type="checkbox" style={{ marginTop: '0.25rem', width: 'auto' }} disabled />
-            <span>You want to look more professional vs. competitors</span>
-          </label>
+          {[
+            'You manage 20+ properties across multiple owners',
+            'Owners constantly ask for updates: "How\'s my property doing?"',
+            'You spend 3–5 hours per month per owner on reporting',
+            'You wish your PMS just... talked to owners directly',
+            'You want to look more professional vs. competitors',
+          ].map((item) => (
+            <label key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', cursor: 'default', padding: '0.5rem' }}>
+              <input type="checkbox" style={{ marginTop: '0.25rem', width: 'auto' }} disabled />
+              <span>{item}</span>
+            </label>
+          ))}
         </div>
         <p style={{ marginTop: '1.5rem', fontSize: '1.1rem', fontWeight: 600, color: '#667eea' }}>
           If you checked 2 or more, OwnerPulse is built for you.
@@ -88,69 +98,53 @@ export default function Home() {
 
       {/* COMPARISON SECTION */}
       <section>
-        <h2>Hostaway Tracks the Data. You Do the Manual Work.</h2>
+        <h2>Your PMS Tracks the Data. You Do the Manual Work.</h2>
         <p style={{ fontSize: '1.15rem', color: '#555', marginBottom: '2rem', textAlign: 'center' }}>
-          Imagine saving <strong>5-10 hours per owner per month</strong> on reporting.
+          Imagine saving <strong>5–10 hours per owner per month</strong> on reporting.
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginTop: '2rem' }}>
           <div style={{ background: '#fef2f2', padding: '1.5rem', borderRadius: '8px', border: '2px solid #fecaca' }}>
             <h3 style={{ color: '#dc2626', marginBottom: '1rem' }}>What You Do Today</h3>
             <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
-                <span style={{ color: '#dc2626', marginRight: '0.5rem', fontSize: '1.2rem' }}>❌</span>
-                <span>Manual Excel exports every week</span>
-              </li>
-              <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
-                <span style={{ color: '#dc2626', marginRight: '0.5rem', fontSize: '1.2rem' }}>❌</span>
-                <span>Write the same explanation emails</span>
-              </li>
-              <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
-                <span style={{ color: '#dc2626', marginRight: '0.5rem', fontSize: '1.2rem' }}>❌</span>
-                <span>Answer &ldquo;what&apos;s happening?&rdquo; calls</span>
-              </li>
-              <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
-                <span style={{ color: '#dc2626', marginRight: '0.5rem', fontSize: '1.2rem' }}>❌</span>
-                <span>Owners feel disconnected</span>
-              </li>
-              <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
-                <span style={{ color: '#dc2626', marginRight: '0.5rem', fontSize: '1.2rem' }}>❌</span>
-                <span><strong>3-5 hours per owner per month</strong></span>
-              </li>
+              {[
+                'Manual Excel exports every week',
+                'Write the same explanation emails',
+                'Answer "what\'s happening?" calls',
+                'Owners feel disconnected',
+                '3–5 hours per owner per month',
+              ].map((item, i) => (
+                <li key={i} style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
+                  <span style={{ color: '#dc2626', marginRight: '0.5rem', fontSize: '1.2rem' }}>❌</span>
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
           <div style={{ background: '#f0fdf4', padding: '1.5rem', borderRadius: '8px', border: '2px solid #86efac' }}>
             <h3 style={{ color: '#16a34a', marginBottom: '1rem' }}>With OwnerPulse</h3>
             <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
-                <span style={{ color: '#16a34a', marginRight: '0.5rem', fontSize: '1.2rem' }}>✅</span>
-                <span>Weekly summaries emailed to owners</span>
-              </li>
-              <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
-                <span style={{ color: '#16a34a', marginRight: '0.5rem', fontSize: '1.2rem' }}>✅</span>
-                <span>Data pulled directly from Hostaway</span>
-              </li>
-              <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
-                <span style={{ color: '#16a34a', marginRight: '0.5rem', fontSize: '1.2rem' }}>✅</span>
-                <span>Metrics + narrative, no typing</span>
-              </li>
-              <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
-                <span style={{ color: '#16a34a', marginRight: '0.5rem', fontSize: '1.2rem' }}>✅</span>
-                <span>Proactive communication = happy owners</span>
-              </li>
-              <li style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
-                <span style={{ color: '#16a34a', marginRight: '0.5rem', fontSize: '1.2rem' }}>✅</span>
-                <span><strong>Cut owner emails by 60%+</strong></span>
-              </li>
+              {[
+                'Weekly summaries emailed to owners',
+                'Data pulled directly from your PMS',
+                'Metrics + narrative, no typing',
+                'Proactive communication = happy owners',
+                'Cut owner emails by 60%+',
+              ].map((item, i) => (
+                <li key={i} style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'flex-start' }}>
+                  <span style={{ color: '#16a34a', marginRight: '0.5rem', fontSize: '1.2rem' }}>✅</span>
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
-        <div style={{ 
-          marginTop: '2rem', 
-          padding: '1.5rem', 
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', 
-          color: 'white', 
+        <div style={{
+          marginTop: '2rem',
+          padding: '1.5rem',
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          color: 'white',
           borderRadius: '8px',
-          textAlign: 'center'
+          textAlign: 'center',
         }}>
           <p style={{ fontSize: '1.2rem', fontWeight: 600, margin: 0, color: 'white' }}>
             This tool does what you&apos;re already paying or spending hours to do manually.
@@ -160,42 +154,26 @@ export default function Home() {
 
       {/* SOLUTION SECTION */}
       <section>
-        <h2>A Communication Layer on Top of Hostaway</h2>
+        <h2>A Communication Layer on Top of Your PMS</h2>
         <p>
-          We&apos;re building a lightweight add-on that turns your Hostaway data into clear, 
+          We&apos;re building a lightweight add-on that turns your property data into clear,
           weekly owner-friendly updates.
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
-          <div style={{ padding: '1.5rem', background: '#f8f9fa', borderRadius: '8px' }}>
-            <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>📊</div>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>KPI Snapshots</h3>
-            <p style={{ fontSize: '0.95rem', color: '#666', margin: 0 }}>Occupancy, revenue, ADR with trend arrows</p>
-          </div>
-          <div style={{ padding: '1.5rem', background: '#f8f9fa', borderRadius: '8px' }}>
-            <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>📅</div>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>30-Day Pace</h3>
-            <p style={{ fontSize: '0.95rem', color: '#666', margin: 0 }}>Forward-looking booking calendar</p>
-          </div>
-          <div style={{ padding: '1.5rem', background: '#f8f9fa', borderRadius: '8px' }}>
-            <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>💰</div>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Revenue Tracking</h3>
-            <p style={{ fontSize: '0.95rem', color: '#666', margin: 0 }}>MTD vs. target with explanations</p>
-          </div>
-          <div style={{ padding: '1.5rem', background: '#f8f9fa', borderRadius: '8px' }}>
-            <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🔧</div>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Maintenance Log</h3>
-            <p style={{ fontSize: '0.95rem', color: '#666', margin: 0 }}>Clear cost breakdowns & schedules</p>
-          </div>
-          <div style={{ padding: '1.5rem', background: '#f8f9fa', borderRadius: '8px' }}>
-            <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>📈</div>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>What Changed</h3>
-            <p style={{ fontSize: '0.95rem', color: '#666', margin: 0 }}>Weekly narrative updates</p>
-          </div>
-          <div style={{ padding: '1.5rem', background: '#f8f9fa', borderRadius: '8px' }}>
-            <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🎯</div>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Action Items</h3>
-            <p style={{ fontSize: '0.95rem', color: '#666', margin: 0 }}>Proactive strategy insights</p>
-          </div>
+          {[
+            { icon: '📊', title: 'KPI Snapshots', desc: 'Occupancy, revenue, ADR with trend arrows' },
+            { icon: '📅', title: '30-Day Pace', desc: 'Forward-looking booking calendar' },
+            { icon: '💰', title: 'Revenue Tracking', desc: 'MTD vs. target with explanations' },
+            { icon: '🔧', title: 'Maintenance Log', desc: 'Clear cost breakdowns & schedules' },
+            { icon: '📈', title: 'What Changed', desc: 'Weekly narrative updates' },
+            { icon: '🎯', title: 'Action Items', desc: 'Proactive strategy insights' },
+          ].map(({ icon, title, desc }) => (
+            <div key={title} style={{ padding: '1.5rem', background: '#f8f9fa', borderRadius: '8px' }}>
+              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>{icon}</div>
+              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>{title}</h3>
+              <p style={{ fontSize: '0.95rem', color: '#666', margin: 0 }}>{desc}</p>
+            </div>
+          ))}
         </div>
         <p style={{ marginTop: '2rem', fontSize: '1.1rem', fontWeight: 600 }}>
           Sent automatically by email or portal. Fully white-labeled with your branding.
@@ -206,7 +184,8 @@ export default function Home() {
       <section style={{ background: 'linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%)', border: '2px solid #667eea' }}>
         <h2>Portfolio Summary for Multi-Property Owners</h2>
         <p style={{ fontSize: '1.15rem', color: '#555' }}>
-          Owners with multiple properties don&apos;t want 3 separate emails. They get one weekly summary of their entire portfolio, then can drill into any property.
+          Owners with multiple properties don&apos;t want 3 separate emails. They get one weekly
+          summary of their entire portfolio, then can drill into any property.
         </p>
         <div style={{ marginTop: '2rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
           <div>
@@ -214,7 +193,7 @@ export default function Home() {
             <ul style={{ fontSize: '1rem' }}>
               <li>Combined revenue across all properties</li>
               <li>Average occupancy rate</li>
-              <li>Best & worst performing this week</li>
+              <li>Best &amp; worst performing this week</li>
               <li>Total maintenance costs</li>
               <li>Upcoming opportunities across portfolio</li>
             </ul>
@@ -224,7 +203,7 @@ export default function Home() {
             <ul style={{ fontSize: '1rem' }}>
               <li>Drill into any property for full breakdown</li>
               <li>Same weekly update format per property</li>
-              <li>Property-specific insights & actions</li>
+              <li>Property-specific insights &amp; actions</li>
               <li>Compare property performance trends</li>
               <li>All in one email, organized clearly</li>
             </ul>
@@ -241,20 +220,26 @@ export default function Home() {
       <section>
         <h2>What Owners Receive Each Week</h2>
         <p style={{ fontSize: '1.15rem', color: '#555' }}>
-          See exactly what your owners could receive every week — metrics + narrative, ready without typing an email.
+          See exactly what your owners could receive every week — metrics + narrative,
+          ready without typing an email.
         </p>
         <div style={{ marginTop: '1.5rem' }}>
-          <a href="/Weekly Owner Update - Sample2.pdf" target="_blank" rel="noopener noreferrer" 
-             style={{ display: 'block', textDecoration: 'none' }}>
-            <img 
-              src="/Screenshot 2026-02-10 at 00.53.23.png" 
-              alt="Sample owner update preview" 
-              style={{ 
-                maxWidth: '100%', 
+          <a
+            href={SITE_CONFIG.samplePdfUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: 'block', textDecoration: 'none' }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/Screenshot 2026-02-10 at 00.53.23.png"
+              alt="Sample owner update preview — click to open full PDF"
+              style={{
+                maxWidth: '100%',
                 border: '2px solid #ddd',
                 borderRadius: '8px',
                 cursor: 'pointer',
-                transition: 'transform 0.2s, box-shadow 0.2s'
+                transition: 'transform 0.2s, box-shadow 0.2s',
               }}
               onMouseOver={(e) => {
                 e.currentTarget.style.transform = 'translateY(-4px)';
@@ -267,10 +252,16 @@ export default function Home() {
             />
           </a>
           <p style={{ marginTop: '1rem', textAlign: 'center' }}>
-            <a href="/Weekly Owner Update - Sample2.pdf" target="_blank" rel="noopener noreferrer"
-               style={{ color: '#667eea', fontWeight: 600, fontSize: '1.1rem', textDecoration: 'none' }}>
-              Click to view full sample PDF →
+            <a
+              href={SITE_CONFIG.samplePdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#667eea', fontWeight: 600, fontSize: '1.1rem', textDecoration: 'none' }}
+            >
+              Download Sample Weekly Owner Update (PDF) →
             </a>
+            <br />
+            <span style={{ fontSize: '0.85rem', color: '#999' }}>Sample document only. No login required.</span>
           </p>
         </div>
       </section>
@@ -283,7 +274,7 @@ export default function Home() {
         </p>
         <p>
           <strong>
-            Almost none focus on proactive owner communication: explaining the numbers, 
+            Almost none focus on proactive owner communication: explaining the numbers,
             pacing forecasts, weekly confidence-building, and reducing owner anxiety.
           </strong>
         </p>
@@ -298,73 +289,94 @@ export default function Home() {
       <section style={{ textAlign: 'center', background: '#fafafa' }}>
         <h3 style={{ color: '#667eea', marginBottom: '1.5rem' }}>Built for Property Managers</h3>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
-          <div>
-            <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🔒</div>
-            <p style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Secure & Private</p>
-            <p style={{ fontSize: '0.9rem', color: '#666', margin: 0 }}>Secure read-only access to your Hostaway data</p>
+          {[
+            { icon: '🔒', title: 'Secure & Private', desc: 'Read-only access to your data — no passwords collected' },
+            { icon: '🎨', title: 'White-Labeled', desc: 'Reports carry your branding' },
+            { icon: '⚡', title: 'Fully Automated', desc: 'Set it once, runs forever' },
+            { icon: '🔌', title: 'PMS Native', desc: 'Starts with Hostaway; more integrations planned' },
+          ].map(({ icon, title, desc }) => (
+            <div key={title}>
+              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>{icon}</div>
+              <p style={{ fontWeight: 600, marginBottom: '0.25rem' }}>{title}</p>
+              <p style={{ fontSize: '0.9rem', color: '#666', margin: 0 }}>{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* NO PHISHING / NO CREDENTIALS TRUST BLOCK */}
+      <section style={{
+        background: '#f0fdf4',
+        border: '2px solid #86efac',
+        borderRadius: '12px',
+      }}>
+        <h3 style={{ color: '#16a34a', marginBottom: '1.25rem' }}>
+          🔒 Your Security Matters
+        </h3>
+        <div style={{ display: 'grid', gap: '0.85rem' }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ fontSize: '1.25rem', marginTop: '0.1rem' }}>✅</span>
+            <p style={{ margin: 0, fontSize: '1.05rem' }}>
+              <strong>We never ask for passwords or logins.</strong> OwnerPulse does not request
+              your PMS credentials, email password, or any account access.
+            </p>
           </div>
-          <div>
-            <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🎨</div>
-            <p style={{ fontWeight: 600, marginBottom: '0.25rem' }}>White-Labeled</p>
-            <p style={{ fontSize: '0.9rem', color: '#666', margin: 0 }}>Reports carry your branding</p>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ fontSize: '1.25rem', marginTop: '0.1rem' }}>✅</span>
+            <p style={{ margin: 0, fontSize: '1.05rem' }}>
+              <strong>We only collect basic business contact info</strong> to send the sample
+              update and follow up about the pilot — nothing more.
+            </p>
           </div>
-          <div>
-            <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>⚡</div>
-            <p style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Fully Automated</p>
-            <p style={{ fontSize: '0.9rem', color: '#666', margin: 0 }}>Set it once, runs forever</p>
-          </div>
-          <div>
-            <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🔌</div>
-            <p style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Hostaway Native</p>
-            <p style={{ fontSize: '0.9rem', color: '#666', margin: 0 }}>Built specifically for Hostaway</p>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ fontSize: '1.25rem', marginTop: '0.1rem' }}>✅</span>
+            <p style={{ margin: 0, fontSize: '1.05rem' }}>
+              <strong>Unsubscribe anytime.</strong> Email us at{' '}
+              <a href={`mailto:${SITE_CONFIG.contactEmail}`} style={{ color: '#16a34a' }}>
+                {SITE_CONFIG.contactEmail}
+              </a>{' '}
+              and we&apos;ll remove you immediately.
+            </p>
           </div>
         </div>
+        <p style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: '#666', marginBottom: 0 }}>
+          Read our{' '}
+          <a href="/privacy" style={{ color: '#667eea' }}>Privacy Policy</a>
+          {' '}and{' '}
+          <a href="/terms" style={{ color: '#667eea' }}>Terms of Service</a>
+          {' '}for full details.
+        </p>
       </section>
 
       {/* FORM / CTA SECTION */}
       <section id="form">
         <h2>Get the Sample Owner Update</h2>
         <p>Enter your details to download the sample + join the pilot waitlist.</p>
-        
-        <p style={{ 
-          fontSize: '0.95rem', 
-          color: '#666', 
-          fontStyle: 'italic', 
+
+        <p style={{
+          fontSize: '0.95rem',
+          color: '#666',
+          fontStyle: 'italic',
           marginBottom: '1.5rem',
-          paddingTop: '0.5rem'
+          paddingTop: '0.5rem',
         }}>
           This is for STR property managers (not individual hosts).
         </p>
-        
-        <form action={FORM_ACTION_URL} method="POST">
+
+        <form action={SITE_CONFIG.formspreeUrl} method="POST">
           <div className="form-group">
             <label htmlFor="name">Name</label>
-            <input 
-              type="text" 
-              id="name" 
-              name="name" 
-              required 
-            />
+            <input type="text" id="name" name="name" required />
           </div>
 
           <div className="form-group">
             <label htmlFor="company">Company</label>
-            <input 
-              type="text" 
-              id="company" 
-              name="company" 
-              required 
-            />
+            <input type="text" id="company" name="company" required />
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              required 
-            />
+            <input type="email" id="email" name="email" required />
           </div>
 
           <div className="form-group">
@@ -378,55 +390,63 @@ export default function Home() {
 
           <div className="form-group">
             <label htmlFor="units">Units managed</label>
-            <input 
-              type="text" 
-              id="units" 
-              name="units" 
-              placeholder="e.g., 50 units"
-              required 
-            />
+            <input type="text" id="units" name="units" placeholder="e.g., 50 units" required />
           </div>
 
           <div className="form-group">
             <label htmlFor="headache">Biggest owner-reporting headache</label>
-            <textarea 
-              id="headache" 
-              name="headache" 
+            <textarea
+              id="headache"
+              name="headache"
               placeholder="Tell us what takes the most time..."
               required
             ></textarea>
           </div>
 
           {/* Hidden field for Formspree redirect */}
-          <input type="hidden" name="_next" value="https://ownerpulse.vercel.app/thanks" />
-          
+          <input type="hidden" name="_next" value={SITE_CONFIG.formspreeRedirect} />
+
           <button type="submit" className="btn-submit">
-            Get Sample & Join Pilot Waitlist
+            Get Sample &amp; Join Pilot Waitlist
           </button>
         </form>
-        
-        <div style={{ 
-          marginTop: '2rem', 
-          padding: '1.25rem', 
-          background: '#f0f4ff', 
+
+        <div style={{
+          marginTop: '1.25rem',
+          padding: '1rem 1.25rem',
+          background: '#f0fdf4',
+          borderRadius: '8px',
+          border: '1px solid #86efac',
+          fontSize: '0.9rem',
+          color: '#555',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.5rem',
+        }}>
+          <span>🔒</span>
+          <span>
+            <strong>No passwords. No payment info. No login required.</strong>
+            {' '}We only collect what you see in the form above.
+          </span>
+        </div>
+
+        <div style={{
+          marginTop: '1rem',
+          padding: '1.25rem',
+          background: '#f0f4ff',
           borderRadius: '8px',
           borderLeft: '4px solid #667eea',
           fontSize: '0.95rem',
-          color: '#666'
+          color: '#666',
         }}>
-          <strong style={{ color: '#667eea' }}>This isn&apos;t another spreadsheet.</strong> This is a weekly summary designed for owners — not accountants. Clear, automated, and sent on your schedule.
+          <strong style={{ color: '#667eea' }}>This isn&apos;t another spreadsheet.</strong>
+          {' '}This is a weekly summary designed for owners — not accountants.
+          Clear, automated, and sent on your schedule.
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer>
-        <p style={{ marginBottom: '0.5rem' }}>
-          © 2026 OwnerPulse
-        </p>
-        <p style={{ fontSize: '0.85rem', color: '#999', margin: 0 }}>
-          This site is not affiliated with or endorsed by Hostaway.
-        </p>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

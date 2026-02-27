@@ -3,16 +3,34 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Automated Owner Updates for Hostaway Managers | OwnerPulse",
-  description: "Weekly performance summaries for short-term rental owners — automated from Hostaway data. Save time and keep owners informed without manual reporting.",
-  keywords: ["Hostaway", "property management", "owner reports", "STR management", "short-term rental", "owner communication", "vacation rental management", "Hostaway automation"],
+  title: "OwnerPulse – Automated Weekly Owner Updates",
+  description:
+    "Owner-ready weekly updates for short-term rental managers. Bookings, revenue pace, maintenance highlights, and what changed—without spreadsheets.",
+  keywords: [
+    "property management",
+    "owner reports",
+    "STR management",
+    "short-term rental",
+    "owner communication",
+    "vacation rental management",
+    "automated owner updates",
+    "Hostaway",
+  ],
   openGraph: {
-    title: "Automated Owner Updates for Hostaway Managers | OwnerPulse",
-    description: "Weekly performance summaries for short-term rental owners — automated from Hostaway data. Save time and keep owners informed without manual reporting.",
+    title: "OwnerPulse – Automated Weekly Owner Updates",
+    description:
+      "Owner-ready weekly updates for short-term rental managers. Bookings, revenue pace, maintenance highlights, and what changed—without spreadsheets.",
     type: "website",
+    images: [
+      {
+        url: "/Screenshot 2026-02-10 at 00.53.23.png",
+        width: 1200,
+        alt: "OwnerPulse sample owner update preview",
+      },
+    ],
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
 };
 
